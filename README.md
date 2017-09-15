@@ -5,7 +5,7 @@ This "quick and dirty" tool maps volume up/down input to the foreground applicat
 The primary use for this is when you're playing a game while chatting with your friends via voip software. If the game becomes too loud to understand your friends you can simply turn its volume down without diving into any option menu.
 
 ## Usage
-You can download the binary and put it on your desktop. After startup the tool appears as an icon in the system tray (bottom right of your screen). 
+You can [download the binary](https://github.com/seb3sec/VolumeMapper/releases/download/v1.0/VolumeMapper.exe) and put it on your desktop. After startup the tool appears as an icon in the system tray (bottom right of your screen). 
 You can then use hardware buttons/knobs/wheels/... which normally adjust the master volume to control application specific volume levels.
 
 To stop the tool, just right-click on the icon and choose "exit".
