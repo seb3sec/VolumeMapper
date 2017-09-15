@@ -45,5 +45,8 @@
     <Image Include="..\..\..\..\..\Downloads\SysTrayDemo.ico">
       <Filter>Ressourcendateien</Filter>
     </Image>
+    <Image Include="..\VolumeMapper.ico">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
   </ItemGroup>
 </Project>
