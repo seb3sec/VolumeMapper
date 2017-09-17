@@ -161,10 +161,13 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	case WM_HOTKEY:
 		// process hotkey actions
 		if ((1 <= wParam) && (wParam <= 4)) {
-			WASAPIWrapper::ChangeForegroundAppVolume(-0.03f);
+			WASAPIWrapper::ChangeForegroundAppVolume(-0.03f, true);
 		}
 		if ((6 <= wParam) && (wParam <= 9)) {
-			WASAPIWrapper::ChangeForegroundAppVolume(0.03f);
+			WASAPIWrapper::ChangeForegroundAppVolume(0.03f, true);
+		}
+		if ((20 <= wParam) && (wParam <= 23)) {
+			WASAPIWrapper::ChangeForegroundAppVolume(WASAPIWrapper::GetPreviousVolumeLevel(), false);
 		}
 		break;
 	case WM_DESTROY:
