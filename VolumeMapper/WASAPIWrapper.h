@@ -11,18 +11,30 @@
 #include <tchar.h>
 #include <sstream>
 
-#define EXIT_ON_ERROR(hres) if (FAILED(hres)) { printf("ERROR: 0x%08x\n", hres); goto Exit; }
-#define SAFE_RELEASE(punk) if ((punk) != NULL) { (punk)->Release(); (punk) = NULL; }
+#define SAFE_RELEASE(p) if ((p) != NULL) { (p)->Release(); (p) = NULL; }
 
 class WASAPIWrapper
 {
 public:
-	static bool ChangeForegroundAppVolume(float delta);
+	static bool ChangeForegroundAppVolume(float value, bool addValue);
+	static float GetPreviousVolumeLevel();
 
 	static const CLSID CLSID_MMDeviceEnumerator;
 	static const IID IID_IMMDeviceEnumerator;
 private:
 	WASAPIWrapper();
 	~WASAPIWrapper();
+
+	static bool Setup();
+	static void Reset();
+
+	// WASAPI pointers
+	static IMMDeviceEnumerator* pEnumerator;
+	static IMMDevice* pDevice;
+	static IAudioSessionManager2* pSessionManager;
+	static IAudioSessionEnumerator* pSessionEnumerator;
+	static int sessionCount;
+
+	static float PreviousVolumeLevel;
 };
 
