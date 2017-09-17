@@ -45,6 +45,23 @@ bool HotkeyHelper::RegisterHotkeys(HWND hWnd)
 	{
 		MessageBox(NULL, _T("Failed to register hotkey VOLUME_DOWN (0xAF)!"), _T("VolumeMapper"), MB_OK);
 	}
+	// mute
+	if (!RegisterHotKey(hWnd, 20, MOD_NOREPEAT, 0xAD))
+	{
+		MessageBox(NULL, _T("Failed to register hotkey VOLUME_MUTE (0xAD)!"), _T("VolumeMapper"), MB_OK);
+	}
+	if (!RegisterHotKey(hWnd, 21, MOD_NOREPEAT | MOD_ALT, 0xAD))
+	{
+		MessageBox(NULL, _T("Failed to register hotkey VOLUME_MUTE (0xAD)!"), _T("VolumeMapper"), MB_OK);
+	}
+	if (!RegisterHotKey(hWnd, 22, MOD_NOREPEAT | MOD_SHIFT, 0xAD))
+	{
+		MessageBox(NULL, _T("Failed to register hotkey VOLUME_MUTE (0xAD)!"), _T("VolumeMapper"), MB_OK);
+	}
+	if (!RegisterHotKey(hWnd, 23, MOD_NOREPEAT | MOD_ALT | MOD_SHIFT, 0xAD))
+	{
+		MessageBox(NULL, _T("Failed to register hotkey VOLUME_MUTE (0xAD)!"), _T("VolumeMapper"), MB_OK);
+	}
 
 	return TRUE;
 }
@@ -61,6 +78,11 @@ bool HotkeyHelper::UnregisterHotkeys(HWND hWnd)
 	UnregisterHotKey(hWnd, 7);
 	UnregisterHotKey(hWnd, 8);
 	UnregisterHotKey(hWnd, 9);
+	// mute
+	UnregisterHotKey(hWnd, 20);
+	UnregisterHotKey(hWnd, 21);
+	UnregisterHotKey(hWnd, 22);
+	UnregisterHotKey(hWnd, 23);
 
 	return TRUE;
 }
