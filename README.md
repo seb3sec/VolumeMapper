@@ -1,12 +1,11 @@
 # VolumeMapper
-This "quick and dirty" tool maps volume up/down input to the foreground application.
+This "quick and dirty" tool maps volume up/down input to the currently focused application.
 
-**_"What's it good for?"_**
-The primary use for this is when you're playing a game while chatting with your friends via voip software. If the game becomes too loud to understand your friends you can simply turn its volume down without diving into any option menu.
+**_"What's it good for?"_** - The primary use for this is when you're playing a game while chatting with your friends via voip software. If the game becomes too loud to understand your friends you can simply turn its volume down without diving into any option menu.
 
 ## Usage
-You can [download the binary](https://github.com/seb3sec/VolumeMapper/releases/download/v1.0/VolumeMapper.exe) and put it on your desktop. After startup the tool appears as an icon in the system tray (bottom right of your screen). 
-You can then use hardware buttons/knobs/wheels/... which normally adjust the master volume to control application specific volume levels.
+You can [download the binary](https://github.com/seb3sec/VolumeMapper/releases/download/v1.1/VolumeMapper.exe) and put it on your desktop. After startup the tool appears as an icon in the system tray (bottom right of your screen). 
+You can then use hardware buttons/knobs/wheels/... which normally adjust the master volume to control application specific volume levels. (This only works with hardware which sends the actual VOLUME_UP/-DOWN key codes. If your knobs don't adjust the volume in the system tray, this tool might not be for you.)
 
 To stop the tool, just right-click on the icon and choose "exit".
 
@@ -20,7 +19,7 @@ You can use your hardware volume controls to adjust the volume of the currently 
 If you hold your Ctrl key while changing volume, this tool doesn't change the applications volume and instead Windows changes the master volume level as usual. *(This was initially a bug but I decided it's quite useful.)*
 
 ### Toggle Volume
-You can press mute to toggle between two volume levels. The tool basically memorizes the current level and toggles to the previous one. By default this key toggles between 5% and whatever your current volume is.
+You can press mute to toggle between two volume levels (same rules with Alt and Shift apply). The tool basically memorizes the current level and toggles to the previous one. By default this key toggles between 5% and whatever your current volume is.
 
 To use two custom values do the following:
 1. Adjust the applications volume to its *loud level*
