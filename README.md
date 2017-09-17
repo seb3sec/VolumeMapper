@@ -16,6 +16,7 @@ This tool has been tested on Windows 10 (64 bit) with fullscreen windowed applic
 
 ### Volume Control
 You can use your hardware volume controls to adjust the volume of the currently focused application. This works with the Alt- and Shift-Modifiers.
+
 If you hold your Ctrl key while changing volume, this tool doesn't change the applications volume and instead Windows changes the master volume level as usual. *(This was initially a bug but I decided it's quite useful.)*
 
 ### Toggle Volume
@@ -26,6 +27,7 @@ To use two custom values do the following:
 2. Press **MUTE**
 3. Adjust the applications volume to its *quiet level*
 2. Press **MUTE** again
+
 Now pressing the mute key toggles between the two levels.
 
 ## Bugs
